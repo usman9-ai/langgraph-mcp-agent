@@ -1,0 +1,1899 @@
+{
+  "fields": [
+    {
+      "name": "Transaction Amount",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "BM Mobile No",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Hire Date",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Driver Salary",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Tour Car Ded",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Ytd Acct Bal",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Utility Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Last Posting Branch",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Experience Months",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "National Identifier",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Mtd Acct Bal",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Checker Count",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Transaction Count",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Allocated",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Communication Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Fuel Allowance Job",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "POP",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Mid Year Bonus",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "FULL NAME (Emp Salary)",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Position 1",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Fix Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Branch Type",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Deposit Segments",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "House Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Locl Cury Acct Bal",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Dept",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Saturday Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Washing Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Employee ID",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Charge Allowance Dm",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Brnch Cpc Sts",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Severe Winter Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Third Last App Rating",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Advance Monthly Bonus",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Car Allowance Job",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Day Of Year",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Total Earning",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Job Related Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Dealing Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Locl Cury Ytd Avg Acct Bal",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Audit Rating Award",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Tehsil",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Business Group Id",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Region (fnl dim all employees)",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Date Key",
+      "dataType": "DATE",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Ameen Window Openning Date",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Pop Desc",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "PROVINCE (Emp Salary)",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Wi Fi Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Sales Incentive",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Cash or NonCash",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Performance Bonus",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Br Code",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Orignl Cury Ytd Acct Bal",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Distance Source",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Accounts",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Car Allowance Sevp",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Consumer Product Award",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Sunday Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Week Of Year",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "GM Name",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Late Sitting Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Last Job Asg Dt",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Full Name",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Branch Name",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Shift Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Collection Incentives",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Medical Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Variable Allowances",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Assignment Id",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Charge Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Last Change By",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Brnch Srogt Id",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Inflation Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Tran Br Code",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Date Of Joining",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Branch Longitude",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Branch Model",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Non Financial Count",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Spot Award",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Orignl Cury Mtd Acct Bal",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Last Rating",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Sub Group",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Smartphone Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Brnch Actv Dt",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Branch Segments",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Net Salary",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Job Code",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Region",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Day Of Quarter",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "District",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Cash Transaction Count",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "GRP",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Grp",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Cnic",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Fuel Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Emp Longitude",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Clus",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Relocation Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "User Status",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Trxn Hour",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Month Of Year",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Operating As",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Special Duty Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Awards 10Cs Ncs Paid",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "AGE",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "BRANCH",
+      "dataType": "STRING",
+      "columnClass": "CALCULATION",
+      "defaultAggregation": "COUNT",
+      "formula": "[Branch Code] + \" | \" + [Branch Name]",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION",
+      "isAutoGenerated": false,
+      "hasUserReference": false
+    },
+    {
+      "name": "Stipend",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Cluster",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Merged In",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Address Region",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Rating Year",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Branch Desc",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Recovery Incentives",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Mobility Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Other Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Cdr Abr",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Meal Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Branch Latitude",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Teaching Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Quarter Of Date",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Brnch Cls Dt",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Quart Sales Perf Bonus",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "RBH Email ID",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Road Distance Km",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Hourofday",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Address Line2",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Education Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Address Line1",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Branch Code",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Entertainment Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Non Cash Transaction Count",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Branch Code2",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "District1",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Last App Rating",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Branch Code1",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Effective Start Date",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Last Grade",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Security Guards Charges",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Last Exit Dt",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Key Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "DM Contact #",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Country",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Financial Count",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Federalholidayflag",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Mobile Phone Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Pf Gpf",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Dep Type",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Sec Last App Rating",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Locl Cury Mtd Avg Acct Bal",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Last Change Date",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Orignl Cury Ytd Avg Acct Bal Opn Dt",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Punctuality Award",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Address District",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Week Of Quarter",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Cashier Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Child Day Care Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Extended Hour Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Total Experience",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Basic Pay",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "EMPLOYEE",
+      "dataType": "STRING",
+      "columnClass": "CALCULATION",
+      "defaultAggregation": "COUNT",
+      "formula": "[Employee ID] + \" | \" + [Full Name]",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION",
+      "isAutoGenerated": false,
+      "hasUserReference": false
+    },
+    {
+      "name": "Gun Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Additional Bonus",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "DM Email ID",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Grade Id",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Ibp Cash Award",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Geographic Area",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Special Bonus",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Distribution From Ebs",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "GM Email ID",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Positions",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Day Of Month",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Month Of Date",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Last Promotion Dt",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Transaction Date",
+      "dataType": "DATE",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Cash Transaction Amount",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Financial Amount",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Location Code",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Dayname",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Start Date",
+      "dataType": "DATE",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "DM Name",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Bankholidayflag",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Grd Abr",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Deferred Bonus",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "JOB",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Job",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "UBL Experience",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Postal Code",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "SUB GROUP (Emp Salary)",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Assignment Status",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Date Of Birth",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Org Open Date",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Festival Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Overtime Drivers",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Gross Salary",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Grade",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "City",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Month Of Quarter",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Province",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Pop Code",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Active",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Branch Catg",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Customers",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Emp Title",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Checker ID",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Day Of Date",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Deputation Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Orignl Cury Acct Bal",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Ubl Stint No",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Pwsa Commute Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "BM Name",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Car Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Crccode",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "BRNCH SROGT ID (Deposit wise trans)",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Financial or NonFinancial",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Extra Mile Bonus",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Employee Number2",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Employee Number1",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Effective Date",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Last Sup Asg Dt",
+      "dataType": "DATETIME",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "YEAR",
+      "dataCategory": "ORDINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Unattractive Area Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Week Of Month",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Conveyance Allowance",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Day Of Week",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Commission Sales Force",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Transaction Type",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Employee Number",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Non Cash Transaction Amount",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "RBH Name",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Emp Latitude",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Last Job",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "JOB (Emp Salary)",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Year Of Date",
+      "dataType": "INTEGER",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "QUANTITATIVE",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Cash Cell Code",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    },
+    {
+      "name": "Orignl Cury Mtd Avg Acct Bal Opn Dt",
+      "dataType": "REAL",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "SUM",
+      "dataCategory": "QUANTITATIVE",
+      "role": "MEASURE"
+    },
+    {
+      "name": "Exp Br",
+      "dataType": "STRING",
+      "columnClass": "COLUMN",
+      "defaultAggregation": "COUNT",
+      "dataCategory": "NOMINAL",
+      "role": "DIMENSION"
+    }
+  ],
+  "parameters": []
+}

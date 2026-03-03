@@ -1,0 +1,75 @@
+3 — Concrete operational parameters (implement these)
+
+MAX_STEPS = 12 (global chain length)
+
+MAX_TOOL_RETRIES = 1 (so total attempts per tool = 1 + MAX_TOOL_RETRIES = 2)
+
+DEFAULT_LIMIT = 10
+
+Fuzzy threshold: TOKEN_SET_THRESHOLD = 80 (rapidfuzz token_set_ratio >= 80)
+
+Substring match: accept if candidate contains query token sequence (case-insensitive)
+
+Fallback order: exact → synonym → candidate set via deterministic filters → substring → fuzzy token_set → last resort: lowest edit distance
+
+Logging: every tool call append an entry {tool, params, status, result_summary, timestamp} to tool_execution_history
+
+
+
+
+
+CODE:
+
+def autonomous_executor(user_input, implementation_plan, tool_list, tool_execution_history):
+    steps = 0
+    while steps < MAX_STEPS:
+        steps += 1
+
+        # 1. If no datasources listed in history, call list_datasources()
+        if not has_listed_datasources(tool_execution_history):
+            result = call_tool("list-datasources")
+            record(result)
+            if error(result): handle_error_and_maybe_retry()
+            continue
+
+        # 2. choose candidate datasource (match by plan or by best fit)
+        ds_id = choose_datasource(user_input, implementation_plan, tool_execution_history)
+
+        # 3. fetch metadata for ds
+        meta = call_tool("get-datasource-metadata", {"datasource_id": ds_id})
+        record(meta)
+        if syntax_error(meta): fetch_query_rules_and_retry_once()
+
+        # 4. map fields from implementation_plan -> metadata_fields using fuzzy pipeline
+        field_map = map_fields(implementation_plan.fields, meta.fields)
+
+        # 5. build query params using exact metadata fields, correct operators, defaults
+        query_params = build_query(user_input, implementation_plan, field_map, limit=DEFAULT_LIMIT)
+
+        # 6. execute query with limited retries
+        for attempt in range(MAX_TOOL_RETRIES + 1):
+            res = call_tool("query-datasource", query_params)
+            record(res)
+            if is_success(res):
+                break
+            elif is_syntax_or_field_error(res) and attempt == 0:
+                # refresh query rules and metadata, rebuild and retry once
+                fetch_query_rules()
+                meta = call_tool("get-datasource-metadata", {"datasource_id": ds_id})
+                field_map = map_fields(...)
+                query_params = build_query(...)
+                continue
+            else:
+                # cannot recover
+                return explain_failure_and_history()
+
+        # 7. inspect result and decide next step
+        if result_fulfills(implementation_plan, res):
+            return compose_final_message(res, field_map, tool_execution_history)
+        else:
+            # maybe need more chaining: refine filters, switch datasource, etc.
+            implementation_plan = refine_plan_from_results(implementation_plan, res)
+            continue
+
+    # exceeded MAX_STEPS
+    return compose_abort_message(tool_execution_history)

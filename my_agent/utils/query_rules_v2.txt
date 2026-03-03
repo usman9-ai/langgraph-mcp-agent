@@ -1,0 +1,80 @@
+=== TABLEAU MCP QUERY RULES (COMPACT) ===
+
+1) QUERY STRUCTURE:
+{
+  "datasource": { "datasourceLuid": "..." },
+  "query": {
+     "fields": [...],       // at least 1 required
+     "filters": [...],      // optional
+     "parameters": [...]    // optional
+  },
+  "options": { ... }       // optional
+}
+
+2) FIELDS:
+- Keys: fieldCaption (required), function (optional: SUM, COUNT, MIN, MAX), fieldAlias (optional), sortDirection (ASC|DESC), sortPriority (unique integer), maxDecimalPlaces.
+- Cannot query same field twice.
+- Cannot have duplicate sort priorities.
+
+3) FILTER TYPES:
+
+A) SET (categorical):
+- fields: fieldCaption
+- values: [..] (must be non-empty)
+- exclude: true/false
+- Use only for discrete values (NOT STRING, use MATCH instead)
+
+B) MATCH (string):
+- fields: fieldCaption
+- contains: "<string>" (required)
+- exclude: true/false
+- For partial/fuzzy string match
+
+C) QUANTITATIVE_NUMERICAL (measure):
+- quantitativeFilterType: MIN, MAX, RANGE, ONLY_NULL, ONLY_NON_NULL
+- min/max (if applicable)
+- includeNulls: optional
+
+D) QUANTITATIVE_DATE:
+- quantitativeFilterType: MIN, MAX, RANGE, ONLY_NULL, ONLY_NON_NULL
+- minDate/maxDate in YYYY-MM-DD
+- includeNulls: optional
+
+E) RELATIVE DATE:
+- periodType: MINUTES, HOURS, DAYS, WEEKS, MONTHS, QUARTERS, YEARS
+- dateRangeType: LAST, CURRENT, NEXT, LASTN, NEXTN, TODATE
+- rangeN required if LASTN/NEXTN
+- anchorDate optional
+
+F) TOP N:
+- howMany: integer
+- fieldToMeasure: fieldCaption + function (SUM, COUNT, MIN, MAX)
+- direction: TOP or BOTTOM
+
+4) CONTEXT FILTERS:
+- Add "context": true to any filter to influence dependent filters
+
+5) GENERAL FILTER RULES:
+- Only one filter per field
+- Set, Match, Relative Date cannot have functions/calculations on the field
+- Validate field names and types against datasource metadata
+
+6) PARAMETERS:
+- Override default values for calculated fields or bins
+- Must use correct parameter names and types
+
+7) OPTIONS:
+- debug: true/false
+- interpretFieldCaptionsAsFieldNames: true/false
+- disaggregate: true/false
+- returnFormat: OBJECTS | ARRAYS
+
+8) AGGREGATIONS:
+- Allowed in query.fields: SUM, COUNT, MIN, MAX
+- Disallowed: AVG (compute outside query)
+- Only one aggregation per field
+
+9) GENERAL RULES:
+- Always follow documented property names and values
+- Do not invent keys/properties
+- Validate query against this spec before sending

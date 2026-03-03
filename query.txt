@@ -1,0 +1,44 @@
+  "type": "tool_call"
+}
+Corrected tool call: 
+
+
+{'name': 'query-datasource', 
+'args': {'datasourceLuid': '1c6b03df-5434-4ce4-a838-9315bc4717f1', 
+'query': {'fields': [{'fieldCaption': 'Transaction Count', 'function': 'SUM', 'fieldAlias': 'Total Transactions'}], 
+'filters': [{'field': {'fieldCaption': 'Branch Code'}, 'filterType': 'SET', 'values': ['0949']}, 
+{'field': {'fieldCaption': 'Transaction Date'}, 'filterType': 'DATE', 'start': '2026-01-10', 'end': '2026-01-10'}]},
+ 'limit': 10}, 'id': 'call_mYPEslnOfr6vreOH4E0doI74', 'type': 'tool_call'}
+
+
+
+ {
+        "fields": [
+          {
+            "fieldCaption": "Branch",
+            "fieldAlias": "Branch"
+          },
+          {
+            "fieldCaption": "Transaction ID",
+            "function": "COUNT",
+            "fieldAlias": "Transaction Count"
+          }
+        ],
+        "filters": [
+          {
+            "field": { "fieldCaption": "Branch" },
+            "filterType": "SET",
+            "values": ["0949"],
+            "context": true
+          },
+          {
+            "field": { "fieldCaption": "Transaction Date" },
+            "filterType": "DATE",
+            "periodType": "DAY",
+            "dateRangeType": "ON",
+            "anchorDate": "2026-01-10",
+            "context": true
+          }
+        ]
+      }
+    

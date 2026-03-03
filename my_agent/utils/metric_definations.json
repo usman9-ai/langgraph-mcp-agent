@@ -1,0 +1,46 @@
+{
+  "metrics": [
+    {
+      "name": "MTD",
+      "description": "Month-to-Date total or average of a metric, calculated from the start of the current month up to the current date.",
+      "calculation": "Sum or average of the metric where date >= first day of current month and date <= today",
+      "example": "If transactions in Feb are [100, 200, 150], MTD sum = 450, MTD avg = 150"
+    },
+    {
+      "name": "Average Balance",
+      "description": "Average balance of an account over a given period.",
+      "calculation": "Sum of daily balances divided by number of days in the period",
+      "example": "Daily balances = [1000, 1200, 1100], Avg Balance = (1000 + 1200 + 1100)/3 = 1100"
+    },
+    {
+      "name": "Hourly Average",
+      "description": "Average value of a metric per hour.",
+      "calculation": "Sum of metric values in an hour divided by number of records in that hour",
+      "example": "Transactions at 1 PM = [50, 70, 60], Hourly Avg = (50 + 70 + 60)/3 = 60"
+    },
+    {
+      "name": "Daily Average",
+      "description": "Average value of a metric per day.",
+      "calculation": "Sum of metric values in a day divided by number of records in that day",
+      "example": "Transactions on Feb 18 = [200, 300, 250], Daily Avg = (200+300+250)/3 = 250"
+    },
+        {
+      "name": "Average",
+      "description": "Average value of a metric over a specified period.",
+      "calculation": "Sum of metric values in the period divided by number of records in that period",
+      "example": "Transactions on Feb 18 = [200, 300, 250], Daily Avg = (200+300+250)/3 = 250"
+    },
+    {
+      "name": "YTD",
+      "description": "Year-to-Date total or average of a metric, calculated from Jan 1 of current year up to the current date.",
+      "calculation": "Sum or average of the metric where date >= Jan 1 of current year and date <= today",
+      "example": "If transactions from Jan 1 to today = [100,200,150], YTD sum = 450, YTD avg = 150"
+    },
+    {
+      "name": "Rolling Average",
+      "description": "Average of a metric over a sliding window of recent N periods (days, hours, etc.)",
+      "calculation": "For a window size N, Rolling Avg at time T = sum(metric values in last N periods)/N",
+      "example": "Daily sales = [100, 150, 120, 130], 3-day rolling avg = [NA, NA, (100+150+120)/3=123.33, (150+120+130)/3=133.33]"
+    }
+  ]
+}

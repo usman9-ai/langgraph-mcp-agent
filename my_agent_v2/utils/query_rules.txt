@@ -1,0 +1,215 @@
+=== TABLEAU MCP QUERY RULES ===
+
+This document describes the exact rules for constructing valid MCP (VizQL Data Service) JSON queries.
+
+SOURCE: Official Tableau VizQL Data Service API documentation (Query a Data Source). :contentReference[oaicite:1]{index=1}
+
+---
+
+1) OVERVIEW
+
+Every query must be structured as a JSON object with the following top-level keys:
+
+{
+  "datasource": { 
+     "datasourceLuid": "...",
+  },
+  "query": {
+     "fields": [...],         // Required
+     "filters": [...],        // Optional
+     "parameters": [...]      // Optional
+  },
+  "options": { ... }          // Optional
+}
+
+- The "datasourceLuid" must be provided.
+- "fields" must contain at least one field definition. :contentReference[oaicite:2]{index=2}
+
+---
+
+2) FIELDS (query.fields)
+
+Each field in the "fields" array must include:
+
+{
+  "fieldCaption": "<exact field caption from metadata>",
+  "function": "<aggregation function>",     // optional
+  "fieldAlias": "<alias>",                  // optional
+  "sortDirection": "<ASC|DESC>",            // optional
+  "sortPriority": <integer>,                // optional
+  "maxDecimalPlaces": <integer>             // optional
+}
+
+Rules:
+- You must query at least one field.
+- You cannot query the same field twice.
+- You cannot have duplicate sort priorities. :contentReference[oaicite:3]{index=3}
+
+---
+
+3) FILTERS (query.filters)
+
+Each filter must include:
+- "field": { "fieldCaption": "..." }
+- "filterType": must be one of the valid documented types.
+
+Each filter type has its own required and allowed keys.
+
+Do not invent keys that are not documented here (e.g., "start", "end" for date range). Use only keys shown below.
+
+---
+
+4) VALID FILTER TYPES
+
+A) SET Filters
+
+{
+  "field": { "fieldCaption": "..." },
+  "filterType": "SET",
+  "values": [ ... ],          // must be non-empty
+  "exclude": <true|false>
+}
+
+Rules:
+- "values" must have at least one value.
+- Used for including/excluding specific values. :contentReference[oaicite:4]{index=4}
+- Don't use this if field datatype is STRING, use MATCH filterType instead
+
+---
+
+B) Quantitative Filters (Numerical / Date)
+
+All quantitative filters require:
+
+"quantitativeFilterType": one of [
+  "MIN", "MAX", "RANGE", "ONLY_NULL", "ONLY_NON_NULL"
+]
+
+Additional rules:
+- "MIN": must include "min" or "minDate".
+- "MAX": must include "max" or "maxDate".
+- "RANGE": must include both min/minDate and max/maxDate.
+- "ONLY_NULL" and "ONLY_NON_NULL": no min/max values.
+- "includeNulls" is optional (false by default).
+
+There are two kinds:
+
+1) QUANTITATIVE_NUMERICAL (for measures)
+{
+  "filterType": "QUANTITATIVE_NUMERICAL",
+  "quantitativeFilterType": "...",
+  "min": <number>,        // if applicable
+  "max": <number>,        // if applicable
+  "includeNulls": <bool>  // optional
+}
+
+2) QUANTITATIVE_DATE (for dates)
+{
+  "filterType": "QUANTITATIVE_DATE",
+  "quantitativeFilterType": "...",
+  "minDate": "YYYY-MM-DD",  // if applicable
+  "maxDate": "YYYY-MM-DD",  // if applicable
+  "includeNulls": <bool>    // optional
+}
+
+Note: Use RFC 3339 date format (YYYY-MM-DD). Time or time zones are not supported. :contentReference[oaicite:5]{index=5}
+
+---
+
+C) Relative Date Filters
+
+{
+  "field": { "fieldCaption": "..." },
+  "filterType": "DATE",
+  "periodType": one of [
+     "MINUTES","HOURS","DAYS","WEEKS","MONTHS","QUARTERS","YEARS"
+  ],
+  "dateRangeType": one of [
+     "LAST","CURRENT","NEXT","LASTN","NEXTN","TODATE"
+  ],
+  "rangeN": <integer>,         // required if dateRangeType is LASTN or NEXTN
+  "anchorDate": "YYYY-MM-DD"   // optional
+}
+
+Rules:
+- "periodType" and "dateRangeType" are required.
+- If using LASTN or NEXTN, "rangeN" must be present. :contentReference[oaicite:6]{index=6}
+
+---
+
+D) TOP N Filters
+
+{
+  "field": { "fieldCaption": "..." },
+  "filterType": "TOP",
+  "howMany": <integer>,
+  "fieldToMeasure": {
+     "fieldCaption": "...",
+     "function": "<aggregation>"
+  },
+  "direction": "TOP" | "BOTTOM"
+}
+
+Rules:
+- Both "howMany" and "fieldToMeasure" are required.
+- "direction" must be "TOP" or "BOTTOM". :contentReference[oaicite:7]{index=7}
+
+---
+
+E) MATCH Filters
+
+{
+  "field": { "fieldCaption": "..." },
+  "filterType": "MATCH",
+  "contains": "<string>",     // optional
+  "exclude": <true|false>     // optional
+}
+
+Rules:
+- "contains" must be provided. :contentReference[oaicite:8]{index=8}
+
+---
+
+5) CONTEXT FILTERS
+
+You may add "context": true to any filter to make it a context filter that influences dependent filters. :contentReference[oaicite:9]{index=9}
+
+---
+
+6) ADDITIONAL FILTER RULES
+
+- You cannot have multiple filters on the same field.
+- Set, Match, and Relative Date filters cannot have functions or calculations on the filtered field. :contentReference[oaicite:10]{index=10}
+
+---
+
+7) PARAMETERS (query.parameters)
+
+- Parameters can override default parameter values.
+- Parameters may be used in calculated fields or bin size definitions.
+- Use correct parameter names and values as defined in the metadata. :contentReference[oaicite:11]{index=11}
+
+---
+
+8) OPTIONS (query.options)
+
+Optional keys:
+- "debug": true | false
+- "interpretFieldCaptionsAsFieldNames": true | false
+- "disaggregate": true | false
+- "returnFormat": "OBJECTS" | "ARRAYS"
+
+These control debugging, return format and interpretation of field names. :contentReference[oaicite:12]{index=12}
+
+---
+
+9) GENERAL RULES
+
+- Always follow the documented property names exactly.
+- Do not invent properties.
+- Only use values and keys described in these rules.
+- Validate constructed queries against this specification before sending them.
+
+---
+
+END OF MCP QUERY RULES

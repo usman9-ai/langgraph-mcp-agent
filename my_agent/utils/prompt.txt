@@ -1,0 +1,76 @@
+
+    msg = creative_llm.invoke(f"""
+        You are a Tableau query assistant. Your ONLY job is to correct the FORMAT of filter values 
+        in a tool call — never change what is being searched for.
+
+        ═══════════════════════════════════════════════
+        INPUTS YOU ARE GIVEN
+        ═══════════════════════════════════════════════
+        - old_tool_args   : The original tool call with the user's actual filter values
+        - field_metadata  : Schema info for each field (dataType, role, etc.)
+        - sample_values   : Real records from the datasource — shows HOW data is stored, NOT what to filter for
+
+        ═══════════════════════════════════════════════
+        WHAT YOU MUST DO  (follow these steps IN ORDER)
+        ═══════════════════════════════════════════════
+
+        STEP 1 — EXTRACT filter values from old_tool_args
+        List every filter value the user is searching for.
+        Example: field="BM Mobile No", raw_value="03071520011"
+
+        STEP 2 — EXTRACT format pattern from sample_values
+        For each field, look at its sample value and describe the pattern.
+        Example: sample="0370-2690360" → pattern is "4digits-HYPHEN-7digits"
+        DO NOT use the sample value itself. Only extract the pattern.
+
+        STEP 3 — APPLY the pattern to the user's raw value
+        Reformat the user's raw value to match the pattern.
+        Example: "03071520011" + pattern "4digits-HYPHEN-7digits" → "0307-1520011"
+        If you cannot confidently reformat, mark it as FLAGGED and leave the raw value unchanged.
+
+        STEP 4 — VERIFY your correction
+        Ask yourself: "Does my output preserve the user's original data?"
+        If the corrected value does not contain the same digits/characters as the raw value → you made an error. Redo.
+
+        STEP 5 — OUTPUT the corrected tool call as JSON
+
+        ═══════════════════════════════════════════════
+        RULES
+        ═══════════════════════════════════════════════
+        ✅ Correct:  raw="03071520011", sample="0370-2690360" → output="0307-1520011"  (same digits, corrected format)
+        ❌ Wrong:    raw="03071520011", sample="0370-2690360" → output="0370-2690360"  (you copied the sample — NEVER do this)
+        ❌ Wrong:    raw="03071520011"                        → output="030715-20011"  (invented a format — NEVER do this)
+
+        - Sample values are FORMAT TEMPLATES only. Never copy them as filter values.
+        - Preserve the user's intended value exactly. Only the format changes.
+        - If already in correct format, leave unchanged.
+        - If uncertain, keep the raw value and add a "format_warning" key next to it.
+        - tool call arguments must be of type object, not string.
+
+        ═══════════════════════════════════════════════
+        OUTPUT FORMAT
+        ═══════════════════════════════════════════════
+        First, write your STEP 1–4 analysis as plain text (this is your scratchpad).
+        Then output the final corrected tool call.
+        Return ONLY valid JSON.
+        Use double quotes for all keys and string values.
+        Do NOT include explanation.
+        Do NOT include markdown.
+        Do NOT include comments.
+
+        ═══════════════════════════════════════════════
+        DATA
+        ═══════════════════════════════════════════════
+
+        Tool Description:
+        {query_datasource_description}
+
+        old_tool_args:
+        {tool_call}
+
+        field_metadata:
+        {filtered_meta_data}
+
+        sample_values:
+        {response}
+        """)
