@@ -1,0 +1,44 @@
+{
+  "name": "claude-desktop-clone",
+  "version": "1.0.0",
+  "description": "A clone of Claude Desktop app with exact UI feel",
+  "scripts": {
+    "dev": "vite",
+    "dev:backend": "cd ../LLM && python api_server.py",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:backend\"",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "claude",
+    "desktop",
+    "chat"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.30.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-toastify": "^11.0.5",
+    "remark-gfm": "^4.0.1",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8"
+  }
+}
